@@ -12,6 +12,5 @@ jobs:
       - name: welcome
         if: contains(github.event.pull_request.labels.*.name, 'frontend')
         uses: ./.github/actions/welcome
-        with:
-          labels: "contains(github.event.pull_request.labels.*.name, 'frontend')"
+ 
  
