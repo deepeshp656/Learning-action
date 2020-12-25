@@ -1,6 +1,6 @@
 name: JS Actions
 
-on: [push]
+on: [pull_request]
 
 jobs:
   action:
