@@ -1,6 +1,6 @@
 name: JS Actions
 
-on: [push]
+on: [pull_request]
 
 jobs:
   action:
@@ -10,6 +10,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: welcome
+        if: contains(github.event.pull_request.labels.*.name, 'frontend')
         uses: ./.github/actions/welcome
-        with:
-          repo-token: ${{secrets.GITHUB_TOKEN}}
+ 
+ 
