@@ -10,7 +10,7 @@ try {
   // Get the JSON webhook payload for the event that triggered the workflow
   const pullRequest = github.context.payload.pull_request;
   const Name=pullRequest.labels["name"];
-  for(var exKey in PullRequest) {
+  for(var exKey in pullRequest) {
     console.log("key:"+exKey+", value:"+pullRequest[exKey]);
 }
   //const payload = JSON.stringify(github.context.payload, undefined, 2)
