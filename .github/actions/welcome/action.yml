@@ -5,6 +5,10 @@ inputs:
     description: 'Who to greet'
     required: faslse 
     default: 'World'
+  labels:
+    description: "who would you like to greet in the console"
+    required: true
+    default: "Hubot"
 outputs:
   time: # id of output
     description: 'The time we greeted you'
