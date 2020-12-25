@@ -13,4 +13,4 @@ jobs:
         uses: ./.github/actions/welcome
         with:
           labels: "${{github.event.pull_request.labels.*.name}}"
-          repo-token: ${{secrets.GITHUB_TOKEN}}
+ 
