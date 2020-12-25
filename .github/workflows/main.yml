@@ -11,5 +11,9 @@ jobs:
 
       - name: welcome
         uses: ./.github/actions/welcome
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        
         with:
+          labels: ${{github.event.pull_request.labels.*.name}} 
           repo-token: ${{secrets.GITHUB_TOKEN}}
