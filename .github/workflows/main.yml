@@ -12,5 +12,5 @@ jobs:
       - name: welcome
         uses: ./.github/actions/welcome
         with:
-          labels: "${{github.event.pull_request.labels.*.name}}"
+          labels: "contains(github.event.pull_request.labels.*.name, 'frontend')"
  
