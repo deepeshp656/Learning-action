@@ -11,8 +11,8 @@ try {
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   let student = JSON.parse(payload);
   console.log(student.action);
-  console.log(student);
-  //console.log(`The event payload: ${payload["action"]}`);
+  console.log(student.pull_request.Labels);
+  console.log(`The event payload: ${payload["action"]}`);
 } catch (error) {
   core.setFailed(error.message);
 }
